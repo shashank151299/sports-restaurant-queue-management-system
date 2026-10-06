@@ -48,6 +48,10 @@ The database runs in-memory and is automatically created when the application st
 
 4. Access the application at: `http://localhost:8080`
 
+## AWS Elastic Beanstalk Deployment
+
+Build the executable Spring Boot JAR with `mvn clean package` and upload `target/queue-management-system-1.0.0.jar` as the application version. For the Elastic Beanstalk Java SE platform, set the `PORT` environment property to `5000`; the app also accepts `SERVER_PORT` and defaults to `8080` for local development. The frontend calls the API on the same host, so it works behind the Elastic Beanstalk proxy.
+
 ## API Endpoints
 
 ### Customers
